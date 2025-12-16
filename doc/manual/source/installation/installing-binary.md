@@ -43,7 +43,12 @@ All installation scripts are invoked the same way:
 
 ```console
 $ export VERSION=2.19.2 
-$ bash <(curl -L https://releases.nixos.org/nix/nix-$VERSION/install)
+
+# sh compatible shell
+$ bash <(curl -L https://releases.nixos.org/nix/nix-$VERSION/install) --daemon
+
+# fish
+$ bash (curl -L https://releases.nixos.org/nix/nix-$VERSION/install | psub) --daemon
 ```
 
 # Multi User Installation
@@ -58,7 +63,11 @@ Supported systems:
 To explicitly instruct the installer to perform a multi-user installation on your system:
 
 ```console
+# sh compatible shell
 $ bash <(curl -L https://nixos.org/nix/install) --daemon
+
+# fish
+$ bash (curl -L https://nixos.org/nix/install | psub) --daemon
 ```
 
 You can run this under your usual user account or `root`.
@@ -69,7 +78,11 @@ The script will invoke `sudo` as needed.
 To explicitly select a single-user installation on your system:
 
 ```console
+# sh compatible shell
 $ bash <(curl -L https://nixos.org/nix/install) --no-daemon
+
+# fish
+$ bash (curl -L https://nixos.org/nix/install | psub) --no-daemon
 ```
 
 In a single-user installation, `/nix` is owned by the invoking user.

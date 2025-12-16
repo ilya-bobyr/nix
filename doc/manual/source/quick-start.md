@@ -6,11 +6,17 @@ For more in-depth information you are kindly referred to subsequent chapters.
 1. Install Nix:
 
    ```console
-   # For multi-user install
+   # For multi-user install with sh compatible shell
    $ bash <(curl -L https://nixos.org/nix/install) --daemon
 
-   # For single-user install
+   # For single-user install with sh compatible shell
    $ bash <(curl -L https://nixos.org/nix/install) --no-daemon
+
+   # For multi-user install with fish
+   $ bash (curl -L https://nixos.org/nix/install | psub) --daemon
+
+   # For single-user install with fish
+   $ bash (curl -L https://nixos.org/nix/install | psub) --no-daemon
    ```
 
    The install script will use `sudo`, so make sure you have sufficient rights.

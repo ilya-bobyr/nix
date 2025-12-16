@@ -809,7 +809,7 @@ This script is going to call sudo a lot. Normally, it would show you
 exactly what commands it is running and why. However, the script is
 run in a headless fashion, like this:
 
-  $ curl -L https://nixos.org/nix/install | sh
+  $ curl -L https://nixos.org/nix/install | sh -s -- --daemon
 
 or maybe in a CI pipeline. Because of that, I'm going to skip the
 verbose output in the interest of brevity.
@@ -818,7 +818,7 @@ If you would like to
 see the output, try like this:
 
   $ curl -L -o install-nix https://nixos.org/nix/install
-  $ sh ./install-nix
+  $ sh ./install-nix --daemon
 
 EOF
         return 0

@@ -23,7 +23,11 @@ This option requires either:
 > when running Nix commands, refer to GitHub issue [NixOS/nix#10892](https://github.com/NixOS/nix/issues/10892) for instructions to fix your installation without reinstalling.
 
 ```console
+# sh compatible shell
 $ bash <(curl -L https://nixos.org/nix/install) --daemon
+
+# fish
+$ bash (curl -L https://nixos.org/nix/install | psub) --daemon
 ```
 
 ## Single-user
@@ -38,7 +42,11 @@ cannot offer equivalent sharing, isolation, or security.
 This option is suitable for systems without systemd.
 
 ```console
+# sh compatible shell
 $ bash <(curl -L https://nixos.org/nix/install) --no-daemon
+
+# fish
+$ bash (curl -L https://nixos.org/nix/install | psub) --no-daemon
 ```
 
 ## Distributions

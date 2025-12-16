@@ -28,11 +28,17 @@ Set the environment variable and install Nix
 ```console
 $ export NIX_SSL_CERT_FILE=/etc/ssl/my-certificate-bundle.crt
 
-# For multi-user install
+# For multi-user install with sh compatible shell
 $ bash <(curl -L https://nixos.org/nix/install) --daemon
 
-# For single-user install
+# For single-user install with sh compatible shell
 $ bash <(curl -L https://nixos.org/nix/install) --no-daemon
+
+# For multi-user install with fish
+$ bash (curl -L https://nixos.org/nix/install | psub) --daemon
+
+# For single-user install with fish
+$ bash (curl -L https://nixos.org/nix/install | psub) --no-daemon
 ```
 
 In the shell profile and rc files (for example, `/etc/bashrc`,
