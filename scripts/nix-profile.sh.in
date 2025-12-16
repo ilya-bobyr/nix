@@ -16,9 +16,9 @@ else
     NIX_LINK="$HOME/.nix-profile"
 fi
 if [ -n "${XDG_STATE_HOME-}" ]; then
-    NIX_LINK_NEW="$XDG_STATE_HOME/nix/profile"
+    NIX_LINK_NEW="$XDG_STATE_HOME/nix/profiles/profile"
 else
-    NIX_LINK_NEW="$HOME/.local/state/nix/profile"
+    NIX_LINK_NEW="$HOME/.local/state/nix/profiles/profile"
 fi
 if [ -e "$NIX_LINK_NEW" ]; then
     if [ -t 2 ] && [ -e "$NIX_LINK" ]; then

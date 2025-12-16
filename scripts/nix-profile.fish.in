@@ -32,9 +32,9 @@ end
 
 set --local NIX_LINK_NEW
 if test -n "$XDG_STATE_HOME"
-    set NIX_LINK_NEW "$XDG_STATE_HOME/nix/profile"
+    set NIX_LINK_NEW "$XDG_STATE_HOME/nix/profiles/profile"
 else
-    set NIX_LINK_NEW "$HOME/.local/state/nix/profile"
+    set NIX_LINK_NEW "$HOME/.local/state/nix/profiles/profile"
 end
 if test -e "$NIX_LINK_NEW"
     if test -t 2; and test -e "$NIX_LINK"
